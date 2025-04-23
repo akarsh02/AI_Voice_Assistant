@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 53,
+            "activePatchIndex": 71,
             "patches": [
                 {
                     "date": 1745406855538,
@@ -220,6 +220,78 @@
                 {
                     "date": 1745413787473,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   },\n   title:{\n     color:\"#ffff\",\n     margin:\"auto\",\n-    fontFamily:\"SegoeUI\",\n+    // fontFamily:\"SegoeUI\",\n     fontSize:scale(24),\n     fontWeight:\"500\"\n   },\n   subtitle:{\n"
+                },
+                {
+                    "date": 1745413833018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,17 +56,17 @@\n   },\n   title:{\n     color:\"#ffff\",\n     margin:\"auto\",\n-    // fontFamily:\"SegoeUI\",\n+    fontFamily:\"SegoeUI\",\n     fontSize:scale(24),\n     fontWeight:\"500\"\n   },\n   subtitle:{\n     color:\"white\",\n     margin:\"auto\",\n     width:\"50%\",\n-    marginTop:\"10px\"\n+    marginTop:\"1px\"\n   }\n })\n \n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745413855484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n     fontSize:scale(24),\n     fontWeight:\"500\"\n   },\n   subtitle:{\n-    color:\"white\",\n+    color:\"#9A9999\",\n     margin:\"auto\",\n     width:\"50%\",\n     marginTop:\"1px\"\n   }\n"
+                },
+                {
+                    "date": 1745413883050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,16 +55,16 @@\n     justifyContent:\"center\",\n   },\n   title:{\n     color:\"#ffff\",\n-    margin:\"auto\",\n+    textAlign:\"center\",\n     fontFamily:\"SegoeUI\",\n     fontSize:scale(24),\n     fontWeight:\"500\"\n   },\n   subtitle:{\n     color:\"#9A9999\",\n-    margin:\"auto\",\n+    textAlign:\"center\",\n     width:\"50%\",\n     marginTop:\"1px\"\n   }\n })\n"
+                },
+                {
+                    "date": 1745413912387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,10 +63,11 @@\n   },\n   subtitle:{\n     color:\"#9A9999\",\n     textAlign:\"center\",\n-    width:\"50%\",\n-    marginTop:\"1px\"\n+    fontFamily:\"SegoeUI\",\n+    fontSize:scale(24),\n+    fontWeight:\"500\"\n   }\n })\n \n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745413924944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n   subtitle:{\n     color:\"#9A9999\",\n     textAlign:\"center\",\n     fontFamily:\"SegoeUI\",\n-    fontSize:scale(24),\n+    fontSize:scale(14),\n     fontWeight:\"500\"\n   }\n })\n \n"
+                },
+                {
+                    "date": 1745413931458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n     color:\"#9A9999\",\n     textAlign:\"center\",\n     fontFamily:\"SegoeUI\",\n     fontSize:scale(14),\n-    fontWeight:\"500\"\n+    fontWeight:\"400\"\n   }\n })\n \n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745413961879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,11 @@\n     color:\"#9A9999\",\n     textAlign:\"center\",\n     fontFamily:\"SegoeUI\",\n     fontSize:scale(14),\n-    fontWeight:\"400\"\n+    fontWeight:\"400\",\n+    width:scale(250),\n+    margin:\"auto\"\n   }\n })\n \n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745413976231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,10 +66,10 @@\n     textAlign:\"center\",\n     fontFamily:\"SegoeUI\",\n     fontSize:scale(14),\n     fontWeight:\"400\",\n-    width:scale(250),\n-    margin:\"auto\"\n+    width:scale(290),\n+    marginHorizontal:\"auto\"\n   }\n })\n \n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745413993971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React, { useRef, useState } from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n-import {scale} from \"react-native-size-matters\"\n+import {scale, verticalScale} from \"react-native-size-matters\"\n import { useFonts } from 'expo-font'\n \n \n const onBoardingScreen = () => {\n@@ -67,9 +67,10 @@\n     fontFamily:\"SegoeUI\",\n     fontSize:scale(14),\n     fontWeight:\"400\",\n     width:scale(290),\n-    marginHorizontal:\"auto\"\n+    marginHorizontal:\"auto\",\n+    paddingTop:verticalScale(10)\n   }\n })\n \n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745414114329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,11 @@\n \n          </View>\n         ))}\n         </ScrollView>\n+        <View style={styles.paginationContainer}>\n+\n+        </View>\n     </LinearGradient>\n   )\n }\n \n@@ -69,8 +72,16 @@\n     fontWeight:\"400\",\n     width:scale(290),\n     marginHorizontal:\"auto\",\n     paddingTop:verticalScale(10)\n+  },\n+  paginationContainer:{\n+    position:\"absolute\",\n+    bottom:verticalScale(20),\n+    flexDirection:\"row\",\n+    justifyContent:\"center\",\n+    alignItems:\"center\",\n+    gap:scale(10)\n   }\n })\n \n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745414130786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n     paddingTop:verticalScale(10)\n   },\n   paginationContainer:{\n     position:\"absolute\",\n-    bottom:verticalScale(20),\n+    bottom:verticalScale(30),\n     flexDirection:\"row\",\n     justifyContent:\"center\",\n     alignItems:\"center\",\n     gap:scale(10)\n"
+                },
+                {
+                    "date": 1745414392436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,18 @@\n          </View>\n         ))}\n         </ScrollView>\n         <View style={styles.paginationContainer}>\n-\n+          {\n+            onBordingData.map((_,index)=>(\n+              <View key={index} style={[styles.dot]}/>\n+            ))\n+          }\n+          \n+          \n+            <View \n+            \n+            />\n         </View>\n     </LinearGradient>\n   )\n }\n@@ -80,8 +89,16 @@\n     flexDirection:\"row\",\n     justifyContent:\"center\",\n     alignItems:\"center\",\n     gap:scale(10)\n+  },\n+  dot:{\n+    width:scale(10),\n+    height:scale(10),\n+    borderRadius:100,\n+    backgroundColor:\"#fff\",\n+    marginHorizontal:scale(5)\n+\n   }\n })\n \n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745414445797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n         </ScrollView>\n         <View style={styles.paginationContainer}>\n           {\n             onBordingData.map((_,index)=>(\n-              <View key={index} style={[styles.dot]}/>\n+              <View key={index} style={[styles.dot,{opacity:activeIndex ===index ?1 :0.3 }]}/>\n             ))\n           }\n           \n           \n"
+                },
+                {
+                    "date": 1745414470418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,9 +91,9 @@\n     alignItems:\"center\",\n     gap:scale(10)\n   },\n   dot:{\n-    width:scale(10),\n+    width:scale(8),\n     height:scale(10),\n     borderRadius:100,\n     backgroundColor:\"#fff\",\n     marginHorizontal:scale(5)\n"
+                },
+                {
+                    "date": 1745414478929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,9 +92,9 @@\n     gap:scale(10)\n   },\n   dot:{\n     width:scale(8),\n-    height:scale(10),\n+    height:scale(8),\n     borderRadius:100,\n     backgroundColor:\"#fff\",\n     marginHorizontal:scale(5)\n \n"
+                },
+                {
+                    "date": 1745414484116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,9 +95,9 @@\n     width:scale(8),\n     height:scale(8),\n     borderRadius:100,\n     backgroundColor:\"#fff\",\n-    marginHorizontal:scale(5)\n+    marginHorizontal:scale(2)\n \n   }\n })\n \n"
+                },
+                {
+                    "date": 1745414502518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n     paddingTop:verticalScale(10)\n   },\n   paginationContainer:{\n     position:\"absolute\",\n-    bottom:verticalScale(30),\n+    bottom:verticalScale(50),\n     flexDirection:\"row\",\n     justifyContent:\"center\",\n     alignItems:\"center\",\n     gap:scale(10)\n"
+                },
+                {
+                    "date": 1745414514941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n     bottom:verticalScale(50),\n     flexDirection:\"row\",\n     justifyContent:\"center\",\n     alignItems:\"center\",\n-    gap:scale(10)\n+    gap:scale(8)\n   },\n   dot:{\n     width:scale(8),\n     height:scale(8),\n"
                 }
             ],
             "date": 1745406855538,

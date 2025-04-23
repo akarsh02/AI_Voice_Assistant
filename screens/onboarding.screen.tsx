@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 import {LinearGradient} from 'expo-linear-gradient'
 import OnBording1 from '@/assets/svgs/onbording1'
 import { onBordingData } from '@/configs/constants'
-import {scale} from "react-native-size-matters"
+import {scale, verticalScale} from "react-native-size-matters"
 import { useFonts } from 'expo-font'
 
 
@@ -40,6 +40,18 @@ const onBoardingScreen = () => {
          </View>
         ))}
         </ScrollView>
+        <View style={styles.paginationContainer}>
+          {
+            onBordingData.map((_,index)=>(
+              <View key={index} style={[styles.dot,{opacity:activeIndex ===index ?1 :0.3 }]}/>
+            ))
+          }
+          
+          
+            <View 
+            
+            />
+        </View>
     </LinearGradient>
   )
 }
@@ -56,16 +68,36 @@ const styles = StyleSheet.create({
   },
   title:{
     color:"#ffff",
-    margin:"auto",
+    textAlign:"center",
     fontFamily:"SegoeUI",
     fontSize:scale(24),
     fontWeight:"500"
   },
   subtitle:{
-    color:"white",
-    margin:"auto",
-    width:"50%",
-    marginTop:"10px"
+    color:"#9A9999",
+    textAlign:"center",
+    fontFamily:"SegoeUI",
+    fontSize:scale(14),
+    fontWeight:"400",
+    width:scale(290),
+    marginHorizontal:"auto",
+    paddingTop:verticalScale(10)
+  },
+  paginationContainer:{
+    position:"absolute",
+    bottom:verticalScale(50),
+    flexDirection:"row",
+    justifyContent:"center",
+    alignItems:"center",
+    gap:scale(8)
+  },
+  dot:{
+    width:scale(8),
+    height:scale(8),
+    borderRadius:100,
+    backgroundColor:"#fff",
+    marginHorizontal:scale(2)
+
   }
 })
 
