@@ -1,6 +1,6 @@
 type onBordingDataType ={
  id:number|string;
  title:string;
- substring:string;
+ subtitle:string;
  image:React.ReactNode
 }

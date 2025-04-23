@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 8,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1745407263273,
@@ -40,6 +40,10 @@
                 {
                     "date": 1745409767133,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   }\n \n   return (\n     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>\n-      <Stack >\n+      <Stack screenOptions={{headerShown:false}}>\n         <Stack.Screen name=\"index\"  />\n       </Stack>\n       <StatusBar style=\"auto\" />\n     </ThemeProvider>\n"
+                },
+                {
+                    "date": 1745413636439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n export default function RootLayout() {\n   const colorScheme = useColorScheme();\n   const [loaded] = useFonts({\n     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),\n+    SegoeUI:require(\"../assets/fonts/Segoe-UI.ttf\")\n   });\n \n   useEffect(() => {\n     if (loaded) {\n"
                 }
             ],
             "date": 1745407263273,
