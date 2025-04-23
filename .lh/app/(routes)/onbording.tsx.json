@@ -1,0 +1,38 @@
+{
+    "sourceFile": "app/(routes)/onbording.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1745402167534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745406992765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import { View, Text } from 'react-native'\n import React from 'react'\n+import onBoardingScreen from '@/screens/onboarding.screen'\n \n const onbording = () => {\n   return (\n-    <View>\n-      <Text>onbording</Text>\n-    </View>\n+    <>\n+      <onBoardingScreen/>\n+    </>\n   )\n }\n \n export default onbording\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745407031120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,8 @@\n import React from 'react'\n import onBoardingScreen from '@/screens/onboarding.screen'\n \n const onbording = () => {\n-  return (\n-    <>\n-      <onBoardingScreen/>\n-    </>\n-  )\n+  return <onBoardingScreen/>;\n }\n \n export default onbording\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745407093287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import { View, Text } from 'react-native'\n import React from 'react'\n import onBoardingScreen from '@/screens/onboarding.screen'\n-\n-const onbording = () => {\n-  return <onBoardingScreen/>;\n+const Onboarding = () => {\n+  return <onBoardingScreen />;\n }\n\\ No newline at end of file\n \n-export default onbording\n+export default Onboarding;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745407415877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { View, Text } from 'react-native'\n import React from 'react'\n-import onBoardingScreen from '@/screens/onboarding.screen'\n+import onBoardingScreen from '@/screens/onboarding.screen';\n+\n const Onboarding = () => {\n-  return <onBoardingScreen />;\n+  return <onBoardingScreen/>\n }\n \n export default Onboarding;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745407552535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { View, Text } from 'react-native'\n import React from 'react'\n-import onBoardingScreen from '@/screens/onboarding.screen';\n+import OnBoardingScreen from '@/screens/onboarding.screen';\n \n const Onboarding = () => {\n-  return <onBoardingScreen/>\n+  return <OnBoardingScreen/>\n }\n \n export default Onboarding;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1745402167534,
+            "name": "Commit-0",
+            "content": "import { View, Text } from 'react-native'\nimport React from 'react'\n\nconst onbording = () => {\n  return (\n    <View>\n      <Text>onbording</Text>\n    </View>\n  )\n}\n\nexport default onbording"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "app/(tabs)/_layout.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1745407163304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745407175790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { Tabs } from 'expo-router';\n import React from 'react';\n-import { Platform, View } from 'react-native';\n+import { Platform, View,Text } from 'react-native';\n \n import { HapticTab } from '@/components/HapticTab';\n import { IconSymbol } from '@/components/ui/IconSymbol';\n import TabBarBackground from '@/components/ui/TabBarBackground';\n"
+                },
+                {
+                    "date": 1745407593058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,7 @@\n import { Tabs } from 'expo-router';\n import React from 'react';\n import { Platform, View,Text } from 'react-native';\n-\n-import { HapticTab } from '@/components/HapticTab';\n-import { IconSymbol } from '@/components/ui/IconSymbol';\n-import TabBarBackground from '@/components/ui/TabBarBackground';\n import { Colors } from '@/constants/Colors';\n import { useColorScheme } from '@/hooks/useColorScheme';\n \n export default function TabLayout() {\n"
+                }
+            ],
+            "date": 1745407163304,
+            "name": "Commit-0",
+            "content": "import { Tabs } from 'expo-router';\nimport React from 'react';\nimport { Platform, View } from 'react-native';\n\nimport { HapticTab } from '@/components/HapticTab';\nimport { IconSymbol } from '@/components/ui/IconSymbol';\nimport TabBarBackground from '@/components/ui/TabBarBackground';\nimport { Colors } from '@/constants/Colors';\nimport { useColorScheme } from '@/hooks/useColorScheme';\n\nexport default function TabLayout() {\n  const colorScheme = useColorScheme();\n\n  return (\n   <View>\n    <Text>layout</Text>\n   </View>\n  );\n}\n"
+        }
+    ]
+}

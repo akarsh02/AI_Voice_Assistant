@@ -1,0 +1,142 @@
+{
+    "sourceFile": "screens/onboarding.screen.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 31,
+            "patches": [
+                {
+                    "date": 1745406855538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745406863779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n const onBoardingScreen = () => {\n   return (\n     <View>\n-      <Text>onboarding</Text>\n+      <Text>onboarding Screen</Text>\n     </View>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745407496208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,5 @@\n     </View>\n   )\n }\n \n-export default onBoardingScreen\n\\ No newline at end of file\n+export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745407761743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n const onBoardingScreen = () => {\n   return (\n     <View>\n-      <Text>onboarding Screen</Text>\n+      <Text style={{color:\"white\"}}>onboarding Screen</Text>\n     </View>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745408846252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { View, Text } from 'react-native'\n import React from 'react'\n+import {LinearGradient} from 'expo-linear-gradient'\n \n const onBoardingScreen = () => {\n   return (\n     <View>\n"
+                },
+                {
+                    "date": 1745409171766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,16 @@\n import {LinearGradient} from 'expo-linear-gradient'\n \n const onBoardingScreen = () => {\n   return (\n-    <View>\n+    <LinearGradient\n+    colors={[\"#250152\",\"000000\"]}\n+    start={{X:0,y:0}}\n+    end={{x:1,y:1}}\n+    \n+    >\n       <Text style={{color:\"white\"}}>onboarding Screen</Text>\n-    </View>\n+    </LinearGradient>\n   )\n }\n \n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745409187493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const onBoardingScreen = () => {\n   return (\n     <LinearGradient\n     colors={[\"#250152\",\"000000\"]}\n-    start={{X:0,y:0}}\n+    start={{x:0,y:0}}\n     end={{x:1,y:1}}\n     \n     >\n       <Text style={{color:\"white\"}}>onboarding Screen</Text>\n"
+                },
+                {
+                    "date": 1745409257917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { View, Text } from 'react-native'\n+import {StyleSheet, View, Text } from 'react-native'\n import React from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n \n const onBoardingScreen = () => {\n@@ -7,12 +7,19 @@\n     <LinearGradient\n     colors={[\"#250152\",\"000000\"]}\n     start={{x:0,y:0}}\n     end={{x:1,y:1}}\n+    style={styles.container}\n     \n     >\n       <Text style={{color:\"white\"}}>onboarding Screen</Text>\n     </LinearGradient>\n   )\n }\n \n+const styles = StyleSheet.create({\n+  container:{\n+    flex:1\n+  }\n+})\n+\n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745409807629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,11 @@\n }\n \n const styles = StyleSheet.create({\n   container:{\n-    flex:1\n+    flex:1,\n+    justifyContent:\"center\",\n+    alignItems:\"center\"\n   }\n })\n \n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745409821935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n const onBoardingScreen = () => {\n   return (\n     <LinearGradient\n-    colors={[\"#250152\",\"000000\"]}\n+    colors={[\"#250152\",\"#000000\"]}\n     start={{x:0,y:0}}\n     end={{x:1,y:1}}\n     style={styles.container}\n     \n"
+                },
+                {
+                    "date": 1745409951964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import {StyleSheet, View, Text } from 'react-native'\n import React from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n+import { StatusBar } from 'expo-status-bar'\n \n const onBoardingScreen = () => {\n   return (\n     <LinearGradient\n@@ -10,8 +11,9 @@\n     end={{x:1,y:1}}\n     style={styles.container}\n     \n     >\n+      <StatusBar barstyle=\"light-content\"/>\n       <Text style={{color:\"white\"}}>onboarding Screen</Text>\n     </LinearGradient>\n   )\n }\n"
+                },
+                {
+                    "date": 1745409965965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n-import {StyleSheet, View, Text } from 'react-native'\n+import {StatusBar,StyleSheet, View, Text } from 'react-native'\n import React from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n-import { StatusBar } from 'expo-status-bar'\n \n const onBoardingScreen = () => {\n   return (\n     <LinearGradient\n"
+                },
+                {
+                    "date": 1745409978003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     end={{x:1,y:1}}\n     style={styles.container}\n     \n     >\n-      <StatusBar barstyle=\"light-content\"/>\n+      <StatusBar barStyle=\"light-content\"/>\n       <Text style={{color:\"white\"}}>onboarding Screen</Text>\n     </LinearGradient>\n   )\n }\n"
+                },
+                {
+                    "date": 1745410429212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import {StatusBar,StyleSheet, View, Text } from 'react-native'\n import React from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n+import OnBording1 from '@/assets/svgs/onbording1'\n \n const onBoardingScreen = () => {\n   return (\n     <LinearGradient\n@@ -11,9 +12,9 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <Text style={{color:\"white\"}}>onboarding Screen</Text>\n+        <OnBording1/>\n     </LinearGradient>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745411074017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import {StatusBar,StyleSheet, View, Text } from 'react-native'\n import React from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n import OnBording1 from '@/assets/svgs/onbording1'\n+import { onBordingData } from '@/configs/constants'\n \n const onBoardingScreen = () => {\n   return (\n     <LinearGradient\n@@ -12,9 +13,13 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-        <OnBording1/>\n+        {onBordingData.map((items:onBordingDataType,index:number)=>{\n+         <View key={index}>\n+              {items.image}\n+         </View>\n+        })}\n     </LinearGradient>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745411150834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,13 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-        {onBordingData.map((items:onBordingDataType,index:number)=>{\n+        {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View key={index}>\n               {items.image}\n          </View>\n-        })}\n+        ))}\n     </LinearGradient>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745411197350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,13 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-        {onBordingData.map((items:onBordingDataType,index:number)=>(\n+        {onBordingData.map((items:onBordingDataType,index:number)=>{\n          <View key={index}>\n               {items.image}\n          </View>\n-        ))}\n+        })}\n     </LinearGradient>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745411206219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,13 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-        {onBordingData.map((items:onBordingDataType,index:number)=>{\n+        {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View key={index}>\n               {items.image}\n          </View>\n-        })}\n+        ))}\n     </LinearGradient>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745411250474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import React from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n+import { ScrollView } from 'react-native-reanimated/lib/typescript/Animated'\n \n const onBoardingScreen = () => {\n   return (\n     <LinearGradient\n@@ -13,13 +14,15 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n+      <ScrollView>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View key={index}>\n               {items.image}\n          </View>\n         ))}\n+        </ScrollView>\n     </LinearGradient>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745411260865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n-import {StatusBar,StyleSheet, View, Text } from 'react-native'\n+import {StatusBar,StyleSheet, View, ScrollView } from 'react-native'\n import React from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n-import { ScrollView } from 'react-native-reanimated/lib/typescript/Animated'\n \n+\n const onBoardingScreen = () => {\n   return (\n     <LinearGradient\n     colors={[\"#250152\",\"#000000\"]}\n"
+                },
+                {
+                    "date": 1745411282486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <ScrollView>\n+      <ScrollView horizontal>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View key={index}>\n               {items.image}\n          </View>\n"
+                },
+                {
+                    "date": 1745411355049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n import { onBordingData } from '@/configs/constants'\n \n \n const onBoardingScreen = () => {\n+  const handleScroll = () =>{\n+    \n+  }\n   return (\n     <LinearGradient\n     colors={[\"#250152\",\"#000000\"]}\n     start={{x:0,y:0}}\n@@ -14,9 +17,9 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <ScrollView horizontal>\n+      <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View key={index}>\n               {items.image}\n          </View>\n"
+                },
+                {
+                    "date": 1745411488621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n \n const onBoardingScreen = () => {\n   const handleScroll = () =>{\n-    \n+\n   }\n   return (\n     <LinearGradient\n     colors={[\"#250152\",\"#000000\"]}\n@@ -17,9 +17,9 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll}>\n+      <ScrollView horizontal  showsHorizontalScrollIndicator={false} onScroll={handleScroll}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View key={index}>\n               {items.image}\n          </View>\n"
+                },
+                {
+                    "date": 1745411508184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n \n const onBoardingScreen = () => {\n   const handleScroll = () =>{\n-\n+    \n   }\n   return (\n     <LinearGradient\n     colors={[\"#250152\",\"#000000\"]}\n@@ -17,9 +17,9 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <ScrollView horizontal  showsHorizontalScrollIndicator={false} onScroll={handleScroll}>\n+      <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View key={index}>\n               {items.image}\n          </View>\n"
+                },
+                {
+                    "date": 1745411612097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n-import {StatusBar,StyleSheet, View, ScrollView } from 'react-native'\n+import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent } from 'react-native'\n import React from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n \n \n const onBoardingScreen = () => {\n-  const handleScroll = () =>{\n+  const handleScroll = (evnet:NativeSyntheticEvent<NativeScrollEvent>) =>{\n     \n   }\n   return (\n     <LinearGradient\n"
+                },
+                {
+                    "date": 1745411722340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,11 @@\n import { onBordingData } from '@/configs/constants'\n \n \n const onBoardingScreen = () => {\n-  const handleScroll = (evnet:NativeSyntheticEvent<NativeScrollEvent>) =>{\n-    \n+  const handleScroll = (event:NativeSyntheticEvent<NativeScrollEvent>) =>{\n+    const contentoffsetX = event.nativeEvent.contentOffset.x;\n+    const currentIndex = Math.round(contentoffsetX/event.nativeEvent.layoutMeasurement.width)\n   }\n   return (\n     <LinearGradient\n     colors={[\"#250152\",\"#000000\"]}\n"
+                },
+                {
+                    "date": 1745411748738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent } from 'react-native'\n-import React from 'react'\n+import React, { useState } from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n \n \n const onBoardingScreen = () => {\n+  const [activeIndex,setActiveIndex]= useState(0)\n   const handleScroll = (event:NativeSyntheticEvent<NativeScrollEvent>) =>{\n     const contentoffsetX = event.nativeEvent.contentOffset.x;\n     const currentIndex = Math.round(contentoffsetX/event.nativeEvent.layoutMeasurement.width)\n   }\n"
+                },
+                {
+                    "date": 1745411773247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n   const [activeIndex,setActiveIndex]= useState(0)\n   const handleScroll = (event:NativeSyntheticEvent<NativeScrollEvent>) =>{\n     const contentoffsetX = event.nativeEvent.contentOffset.x;\n     const currentIndex = Math.round(contentoffsetX/event.nativeEvent.layoutMeasurement.width)\n+    setActiveIndex(currentIndex)\n   }\n   return (\n     <LinearGradient\n     colors={[\"#250152\",\"#000000\"]}\n"
+                },
+                {
+                    "date": 1745411807097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n \n \n const onBoardingScreen = () => {\n   const [activeIndex,setActiveIndex]= useState(0)\n+  const ScrollViewRef = useRef<ScrollView>(null)\n   const handleScroll = (event:NativeSyntheticEvent<NativeScrollEvent>) =>{\n     const contentoffsetX = event.nativeEvent.contentOffset.x;\n     const currentIndex = Math.round(contentoffsetX/event.nativeEvent.layoutMeasurement.width)\n     setActiveIndex(currentIndex)\n"
+                },
+                {
+                    "date": 1745411815297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent } from 'react-native'\n-import React, { useState } from 'react'\n+import React, { useRef, useState } from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n \n"
+                },
+                {
+                    "date": 1745411849597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     >\n       <StatusBar barStyle=\"light-content\"/>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n-         <View key={index}>\n+         <View style={styles.slide} key={index}>\n               {items.image}\n          </View>\n         ))}\n         </ScrollView>\n"
+                },
+                {
+                    "date": 1745411910247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent } from 'react-native'\n+import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent, Dimensions } from 'react-native'\n import React, { useRef, useState } from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n@@ -37,8 +37,12 @@\n   container:{\n     flex:1,\n     justifyContent:\"center\",\n     alignItems:\"center\"\n+  },\n+  slide:{\n+    width:Dimensions.get(\"window\").width,\n+    justifyContent:\"center\",\n   }\n })\n \n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1745406855538,
+            "name": "Commit-0",
+            "content": "import { View, Text } from 'react-native'\nimport React from 'react'\n\nconst onBoardingScreen = () => {\n  return (\n    <View>\n      <Text>onboarding</Text>\n    </View>\n  )\n}\n\nexport default onBoardingScreen"
+        }
+    ]
+}

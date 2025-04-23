@@ -1,0 +1,42 @@
+{
+    "sourceFile": "app/(tabs)/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1745402131471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745402192607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n import { Redirect } from 'expo-router';\n \n export default function HomeScreen() {\n   return (\n-   <Redirect href='/onbording'/>\n+   <Redirect href={'(routes)/onbording'/>}\n   );\n }\n"
+                },
+                {
+                    "date": 1745402371236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n import { Redirect } from 'expo-router';\n \n export default function HomeScreen() {\n   return (\n-   <Redirect href={'(routes)/onbording'/>}\n+   <Redirect href='(routes)/onboarding'/>\n   );\n }\n"
+                },
+                {
+                    "date": 1745402394261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n import { Redirect } from 'expo-router';\n \n export default function HomeScreen() {\n   return (\n-   <Redirect href='(routes)/onboarding'/>\n+   <Redirect href='/onboarding'/>\n   );\n }\n"
+                },
+                {
+                    "date": 1745403122999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n import { Redirect } from 'expo-router';\n \n export default function HomeScreen() {\n   return (\n-   <Redirect href='/onboarding'/>\n+   <Redirect href='/onbording'/>\n   );\n }\n"
+                },
+                {
+                    "date": 1745407609716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,6 @@\n import { Image, StyleSheet, Platform } from 'react-native';\n \n-import { HelloWave } from '@/components/HelloWave';\n-import ParallaxScrollView from '@/components/ParallaxScrollView';\n-import { ThemedText } from '@/components/ThemedText';\n import { ThemedView } from '@/components/ThemedView';\n import { Redirect } from 'expo-router';\n \n export default function HomeScreen() {\n"
+                },
+                {
+                    "date": 1745407653668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n import { Image, StyleSheet, Platform } from 'react-native';\n-\n-import { ThemedView } from '@/components/ThemedView';\n import { Redirect } from 'expo-router';\n \n export default function HomeScreen() {\n   return (\n"
+                }
+            ],
+            "date": 1745402131471,
+            "name": "Commit-0",
+            "content": "import { Image, StyleSheet, Platform } from 'react-native';\n\nimport { HelloWave } from '@/components/HelloWave';\nimport ParallaxScrollView from '@/components/ParallaxScrollView';\nimport { ThemedText } from '@/components/ThemedText';\nimport { ThemedView } from '@/components/ThemedView';\nimport { Redirect } from 'expo-router';\n\nexport default function HomeScreen() {\n  return (\n   <Redirect href='/onbording'/>\n  );\n}\n"
+        }
+    ]
+}

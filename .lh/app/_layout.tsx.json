@@ -1,0 +1,50 @@
+{
+    "sourceFile": "app/_layout.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1745407263273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745407957402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,10 @@\n   }\n \n   return (\n     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>\n-      <Stack>\n-        <Stack.Screen name=\"index\" options={{ headerShown: false }} />\n+      <Stack screenOptions={{headerShown:false}}>\n+        <Stack.Screen name=\"index\"  />\n       </Stack>\n       <StatusBar style=\"auto\" />\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1745409437375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n \n   return (\n     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>\n       <Stack screenOptions={{headerShown:false}}>\n-        <Stack.Screen name=\"index\"  />\n+        <Stack.Screen name=\"onbording\"  />\n       </Stack>\n       <StatusBar style=\"auto\" />\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1745409473590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,10 @@\n   }\n \n   return (\n     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>\n-      <Stack screenOptions={{headerShown:false}}>\n-        <Stack.Screen name=\"onbording\"  />\n+      <Stack>\n+        <Stack.Screen name=\"index\"  />\n       </Stack>\n       <StatusBar style=\"auto\" />\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1745409492236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n \n   return (\n     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>\n       <Stack>\n-        <Stack.Screen name=\"index\"  />\n+        <Stack.Screen name=\"(tabs)\" options={{ headerShown: false }} />\n       </Stack>\n       <StatusBar style=\"auto\" />\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1745409498438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n   return (\n     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>\n       <Stack>\n         <Stack.Screen name=\"(tabs)\" options={{ headerShown: false }} />\n+        <Stack.Screen name=\"+not-found\" />\n       </Stack>\n       <StatusBar style=\"auto\" />\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1745409525735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,10 +29,10 @@\n \n   return (\n     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>\n       <Stack>\n-        <Stack.Screen name=\"(tabs)\" options={{ headerShown: false }} />\n-        <Stack.Screen name=\"+not-found\" />\n+        <Stack.Screen name=\"index\"  />\n+\n       </Stack>\n       <StatusBar style=\"auto\" />\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1745409555896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,11 +28,10 @@\n   }\n \n   return (\n     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>\n-      <Stack>\n+      <Stack >\n         <Stack.Screen name=\"index\"  />\n-\n       </Stack>\n       <StatusBar style=\"auto\" />\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1745409767133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   }\n \n   return (\n     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>\n-      <Stack >\n+      <Stack screenOptions={{headerShown:false}}>\n         <Stack.Screen name=\"index\"  />\n       </Stack>\n       <StatusBar style=\"auto\" />\n     </ThemeProvider>\n"
+                }
+            ],
+            "date": 1745407263273,
+            "name": "Commit-0",
+            "content": "import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';\nimport { useFonts } from 'expo-font';\nimport { Stack } from 'expo-router';\nimport * as SplashScreen from 'expo-splash-screen';\nimport { StatusBar } from 'expo-status-bar';\nimport { useEffect } from 'react';\nimport 'react-native-reanimated';\n\nimport { useColorScheme } from '@/hooks/useColorScheme';\n\n// Prevent the splash screen from auto-hiding before asset loading is complete.\nSplashScreen.preventAutoHideAsync();\n\nexport default function RootLayout() {\n  const colorScheme = useColorScheme();\n  const [loaded] = useFonts({\n    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),\n  });\n\n  useEffect(() => {\n    if (loaded) {\n      SplashScreen.hideAsync();\n    }\n  }, [loaded]);\n\n  if (!loaded) {\n    return null;\n  }\n\n  return (\n    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>\n      <Stack>\n        <Stack.Screen name=\"index\" options={{ headerShown: false }} />\n      </Stack>\n      <StatusBar style=\"auto\" />\n    </ThemeProvider>\n  );\n}\n"
+        }
+    ]
+}

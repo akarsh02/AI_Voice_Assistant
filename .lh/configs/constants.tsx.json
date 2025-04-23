@@ -1,0 +1,30 @@
+{
+    "sourceFile": "configs/constants.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1745410713838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745410739153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,27 @@\n  title:\"\",\n  subtitle:\"\",\n  image:<OnBording1/>\n \n-}]\n\\ No newline at end of file\n+},\n+{\n+ id:1,\n+ title:\"\",\n+ subtitle:\"\",\n+ image:<OnBording1/>\n+\n+},\n+{\n+ id:1,\n+ title:\"\",\n+ subtitle:\"\",\n+ image:<OnBording1/>\n+\n+},\n+{\n+ id:1,\n+ title:\"\",\n+ subtitle:\"\",\n+ image:<OnBording1/>\n+\n+}\n+]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745410857767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import OnBording1 from \"@/assets/svgs/onbording1\"\n \n-export const onBordingData =[{\n+export const onBordingData:onBordingDataType =[{\n  id:1,\n  title:\"\",\n  subtitle:\"\",\n  image:<OnBording1/>\n"
+                },
+                {
+                    "date": 1745411010053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import OnBording1 from \"@/assets/svgs/onbording1\"\n \n-export const onBordingData:onBordingDataType =[{\n+export const onBordingData:onBordingDataType[] =[{\n  id:1,\n  title:\"\",\n  subtitle:\"\",\n  image:<OnBording1/>\n"
+                }
+            ],
+            "date": 1745410713838,
+            "name": "Commit-0",
+            "content": "import OnBording1 from \"@/assets/svgs/onbording1\"\n\nexport const onBordingData =[{\n id:1,\n title:\"\",\n subtitle:\"\",\n image:<OnBording1/>\n\n}]"
+        }
+    ]
+}

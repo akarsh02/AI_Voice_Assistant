@@ -1,0 +1,30 @@
+{
+    "sourceFile": "app.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1745407686723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745407699603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     },\n     \"android\": {\n       \"adaptiveIcon\": {\n         \"foregroundImage\": \"./assets/images/adaptive-icon.png\",\n-        \"backgroundColor\": \"#ffffff\"\n+        \"backgroundColor\": \"#00000\"\n       }\n     },\n     \"web\": {\n       \"bundler\": \"metro\",\n"
+                },
+                {
+                    "date": 1745407714626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n         {\n           \"image\": \"./assets/images/splash-icon.png\",\n           \"imageWidth\": 200,\n           \"resizeMode\": \"contain\",\n-          \"backgroundColor\": \"#ffffff\"\n+          \"backgroundColor\": \"#00000\"\n         }\n       ]\n     ],\n     \"experiments\": {\n"
+                },
+                {
+                    "date": 1745407736985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     },\n     \"android\": {\n       \"adaptiveIcon\": {\n         \"foregroundImage\": \"./assets/images/adaptive-icon.png\",\n-        \"backgroundColor\": \"#00000\"\n+        \"backgroundColor\": \"#ffffff\"\n       }\n     },\n     \"web\": {\n       \"bundler\": \"metro\",\n@@ -29,9 +29,9 @@\n         {\n           \"image\": \"./assets/images/splash-icon.png\",\n           \"imageWidth\": 200,\n           \"resizeMode\": \"contain\",\n-          \"backgroundColor\": \"#00000\"\n+          \"backgroundColor\": \"#ffffff\"\n         }\n       ]\n     ],\n     \"experiments\": {\n"
+                }
+            ],
+            "date": 1745407686723,
+            "name": "Commit-0",
+            "content": "{\n  \"expo\": {\n    \"name\": \"Ai_Voice\",\n    \"slug\": \"Ai_Voice\",\n    \"version\": \"1.0.0\",\n    \"orientation\": \"portrait\",\n    \"icon\": \"./assets/images/icon.png\",\n    \"scheme\": \"myapp\",\n    \"userInterfaceStyle\": \"light\",\n    \"newArchEnabled\": true,\n    \"ios\": {\n      \"supportsTablet\": true\n    },\n    \"android\": {\n      \"adaptiveIcon\": {\n        \"foregroundImage\": \"./assets/images/adaptive-icon.png\",\n        \"backgroundColor\": \"#ffffff\"\n      }\n    },\n    \"web\": {\n      \"bundler\": \"metro\",\n      \"output\": \"static\",\n      \"favicon\": \"./assets/images/favicon.png\"\n    },\n    \"plugins\": [\n      \"expo-router\",\n      [\n        \"expo-splash-screen\",\n        {\n          \"image\": \"./assets/images/splash-icon.png\",\n          \"imageWidth\": 200,\n          \"resizeMode\": \"contain\",\n          \"backgroundColor\": \"#ffffff\"\n        }\n      ]\n    ],\n    \"experiments\": {\n      \"typedRoutes\": true\n    }\n  }\n}\n"
+        }
+    ]
+}
