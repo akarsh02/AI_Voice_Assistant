@@ -29,7 +29,7 @@ const homeScreen = () => {
         borderRadius:scale(100),
         justifyContent:"center"
        }}>
-           <FontAwesome name='microphone' size={scale(50)} color="@2b3356"/>
+           <FontAwesome name='microphone' size={scale(50)} color="#2b3356"/>
        </TouchableOpacity>
       </View>
     </LinearGradient>

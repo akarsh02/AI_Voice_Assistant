@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 37,
+            "activePatchIndex": 38,
             "patches": [
                 {
                     "date": 1745583554783,
@@ -156,6 +156,10 @@
                 {
                     "date": 1745830870390,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,10 @@\n         height:scale(110),\n         backgroundColor:\"#fff\",\n         alignItems:\"center\",\n         flexDirection:\"row\",\n-        borderRadius:scale(100)\n+        borderRadius:scale(100),\n+        justifyContent:\"center\"\n        }}>\n            <FontAwesome name='microphone' size={scale(50)} color=\"@2b3356\"/>\n        </TouchableOpacity>\n       </View>\n"
+                },
+                {
+                    "date": 1745831191334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n         flexDirection:\"row\",\n         borderRadius:scale(100),\n         justifyContent:\"center\"\n        }}>\n-           <FontAwesome name='microphone' size={scale(50)} color=\"@2b3356\"/>\n+           <FontAwesome name='microphone' size={scale(50)} color=\"#2b3356\"/>\n        </TouchableOpacity>\n       </View>\n     </LinearGradient>\n   )\n"
                 }
             ],
             "date": 1745583554783,
