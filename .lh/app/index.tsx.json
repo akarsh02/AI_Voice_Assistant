@@ -3,11 +3,27 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1745409720755,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745582617950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,17 @@\n import { Image, StyleSheet, Platform } from 'react-native';\n import { Redirect } from 'expo-router';\n+import { useEffect, useState } from 'react';\n+import AsyncStorage from '@react-native-async-storage/async-storage';\n \n export default function HomeScreen() {\n+  const [isOnboarding,setOnboarding] = useState(true)\n+  useEffect(()=>{\n+    const checkOnbording = async () =>{\n+      const isOnboarding = await AsyncStorage.getItem(\"onbording\")\n+    }\n+  },[])\n   return (\n    <Redirect href='/onbording'/>\n   );\n }\n+ \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745582653297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,13 @@\n   const [isOnboarding,setOnboarding] = useState(true)\n   useEffect(()=>{\n     const checkOnbording = async () =>{\n       const isOnboarding = await AsyncStorage.getItem(\"onbording\")\n+      if(isOnboarding){\n+        setOnboarding(false)\n+      }\n     }\n+    checkOnbording()\n   },[])\n   return (\n    <Redirect href='/onbording'/>\n   );\n"
+                },
+                {
+                    "date": 1745583094812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n     }\n     checkOnbording()\n   },[])\n   return (\n-   <Redirect href='/onbording'/>\n+   <Redirect href={isOnboarding ? '/onbording':\"/home\"}/>\n   );\n }\n  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745583624278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Redirect } from 'expo-router';\n import { useEffect, useState } from 'react';\n import AsyncStorage from '@react-native-async-storage/async-storage';\n \n-export default function HomeScreen() {\n+export default function App() {\n   const [isOnboarding,setOnboarding] = useState(true)\n   useEffect(()=>{\n     const checkOnbording = async () =>{\n       const isOnboarding = await AsyncStorage.getItem(\"onbording\")\n"
                 }
             ],
             "date": 1745409720755,

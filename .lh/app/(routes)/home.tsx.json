@@ -1,0 +1,30 @@
+{
+    "sourceFile": "app/(routes)/home.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1745477597422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745581354153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n-import { View, Text } from 'react-native'\n+import { View, Text, SafeAreaView } from 'react-native'\n import React from 'react'\n \n const home = () => {\n   return (\n-    <View>\n+    <SafeAreaView>\n       <Text>home</Text>\n-    </View>\n+    </SafeAreaView>\n   )\n }\n \n export default home\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745583575706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,11 @@\n import { View, Text, SafeAreaView } from 'react-native'\n import React from 'react'\n+import HomeScreen from '..'\n \n const home = () => {\n   return (\n-    <SafeAreaView>\n-      <Text>home</Text>\n-    </SafeAreaView>\n+   <HomeScreen/>\n   )\n }\n \n export default home\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745583655316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { View, Text, SafeAreaView } from 'react-native'\n import React from 'react'\n-import HomeScreen from '..'\n+import HomeScreen from '@/screens/home.screen'\n \n+\n const home = () => {\n   return (\n    <HomeScreen/>\n   )\n"
+                }
+            ],
+            "date": 1745477597422,
+            "name": "Commit-0",
+            "content": "import { View, Text } from 'react-native'\nimport React from 'react'\n\nconst home = () => {\n  return (\n    <View>\n      <Text>home</Text>\n    </View>\n  )\n}\n\nexport default home"
+        }
+    ]
+}

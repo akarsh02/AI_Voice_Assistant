@@ -1,0 +1,166 @@
+{
+    "sourceFile": "screens/home.screen.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 37,
+            "patches": [
+                {
+                    "date": 1745583554783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745825420629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,16 @@\n import { View, Text } from 'react-native'\n import React from 'react'\n+import { LinearGradient } from 'expo-linear-gradient'\n+import { StatusBar } from 'expo-status-bar'\n \n const homeScreen = () => {\n   return (\n-    <View>\n-      <Text>homeScreen</Text>\n-    </View>\n+    <LinearGradient colors={[\"#250152\",\"#000\"]}\n+    start ={{x:0,y:0}}\n+    end={{x:1,y:1}}>\n+      <StatusBar barStyle=\"light-content\"/>\n+    </LinearGradient>\n   )\n }\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745825449999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   return (\n     <LinearGradient colors={[\"#250152\",\"#000\"]}\n     start ={{x:0,y:0}}\n     end={{x:1,y:1}}>\n-      <StatusBar barStyle=\"light-content\"/>\n+      <StatusBar barStyle={\"light-content\"}/>\n     </LinearGradient>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745825563458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { View, Text } from 'react-native'\n+import { View, Text,StyleSheet } from 'react-native'\n import React from 'react'\n import { LinearGradient } from 'expo-linear-gradient'\n import { StatusBar } from 'expo-status-bar'\n \n@@ -12,5 +12,13 @@\n     </LinearGradient>\n   )\n }\n \n+const styles = StyleSheet.create({\n+ container:{\n+  flex:1,\n+  justifyContent:\"center\",\n+  alighItems:\"center\",\n+ }\n+})\n+\n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745825603911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n  container:{\n   flex:1,\n   justifyContent:\"center\",\n   alighItems:\"center\",\n+  backgroundColor:\"#131313\"\n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745825627733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import { StatusBar } from 'expo-status-bar'\n \n const homeScreen = () => {\n   return (\n-    <LinearGradient colors={[\"#250152\",\"#000\"]}\n+    <LinearGradient style={styles.container} colors={[\"#250152\",\"#000\"]}\n     start ={{x:0,y:0}}\n     end={{x:1,y:1}}>\n       <StatusBar barStyle={\"light-content\"}/>\n     </LinearGradient>\n"
+                },
+                {
+                    "date": 1745825775057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n \n const homeScreen = () => {\n   return (\n     <LinearGradient style={styles.container} colors={[\"#250152\",\"#000\"]}\n-    start ={{x:0,y:0}}\n-    end={{x:1,y:1}}>\n-      <StatusBar barStyle={\"light-content\"}/>\n+    start={{x: 0, y: 0}}\n+    end={{x: 1, y: 1}}>\n+      <StatusBar style=\"light\" />\n     </LinearGradient>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745826121676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n     <LinearGradient style={styles.container} colors={[\"#250152\",\"#000\"]}\n     start={{x: 0, y: 0}}\n     end={{x: 1, y: 1}}>\n       <StatusBar style=\"light\" />\n+      <Image source={require('@/assets/main/blur.png')}/>\n     </LinearGradient>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745826140980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,12 @@\n     <LinearGradient style={styles.container} colors={[\"#250152\",\"#000\"]}\n     start={{x: 0, y: 0}}\n     end={{x: 1, y: 1}}>\n       <StatusBar style=\"light\" />\n-      <Image source={require('@/assets/main/blur.png')}/>\n+      <Image \n+        source={require('@/assets/main/blur.png')}\n+        style={styles.blurImage}\n+      />\n     </LinearGradient>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745826356286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     start={{x: 0, y: 0}}\n     end={{x: 1, y: 1}}>\n       <StatusBar style=\"light\" />\n       <Image \n-        source={require('@/assets/main/blur.png')}\n+        source={require('@/assets/images/blur.png')}\n         style={styles.blurImage}\n       />\n     </LinearGradient>\n   )\n"
+                },
+                {
+                    "date": 1745826386388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { View, Text,StyleSheet } from 'react-native'\n+import { View, Text,StyleSheet,Image } from 'react-native'\n import React from 'react'\n import { LinearGradient } from 'expo-linear-gradient'\n import { StatusBar } from 'expo-status-bar'\n \n"
+                },
+                {
+                    "date": 1745826413883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,11 @@\n   flex:1,\n   justifyContent:\"center\",\n   alighItems:\"center\",\n   backgroundColor:\"#131313\"\n+ },\n+ blurImage:{\n+  position:\"absolute\"\n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745826470018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { View, Text,StyleSheet,Image } from 'react-native'\n import React from 'react'\n import { LinearGradient } from 'expo-linear-gradient'\n import { StatusBar } from 'expo-status-bar'\n+import { scale } from 'react-native-size-matters'\n \n const homeScreen = () => {\n   return (\n     <LinearGradient style={styles.container} colors={[\"#250152\",\"#000\"]}\n@@ -24,9 +25,12 @@\n   alighItems:\"center\",\n   backgroundColor:\"#131313\"\n  },\n  blurImage:{\n-  position:\"absolute\"\n+  position:\"absolute\",\n+  right:scale(-15),\n+  top:0,\n+  width:scale(240),\n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745826565504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,14 @@\n       <Image \n         source={require('@/assets/images/blur.png')}\n         style={styles.blurImage}\n       />\n+       <Image \n+        source={require('@/assets/images/pink-blur.png')}\n+        style={styles.pinkblur}\n+      />\n+\n+\n     </LinearGradient>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745826583036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         style={styles.blurImage}\n       />\n        <Image \n         source={require('@/assets/images/pink-blur.png')}\n-        style={styles.pinkblur}\n+        // style={styles.pinkblur}\n       />\n \n \n     </LinearGradient>\n"
+                },
+                {
+                    "date": 1745826599956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         style={styles.blurImage}\n       />\n        <Image \n         source={require('@/assets/images/pink-blur.png')}\n-        // style={styles.pinkblur}\n+        style={styles.pinkblur}\n       />\n \n \n     </LinearGradient>\n"
+                },
+                {
+                    "date": 1745826627540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,11 @@\n   position:\"absolute\",\n   right:scale(-15),\n   top:0,\n   width:scale(240),\n+ },\n+ pinkblur:{\n+\n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745826660129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,11 @@\n   top:0,\n   width:scale(240),\n  },\n  pinkblur:{\n-\n+   position:\"absolute\",\n+   width:scale(240)\n+ \n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745826672096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,10 +38,8 @@\n   width:scale(240),\n  },\n  pinkblur:{\n    position:\"absolute\",\n-   width:scale(240)\n- \n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745826683221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n   width:scale(240),\n  },\n  pinkblur:{\n    position:\"absolute\",\n+   top:scale(10)\n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745826692957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n   width:scale(240),\n  },\n  pinkblur:{\n    position:\"absolute\",\n-   top:scale(10)\n+   top:scale(̤-10)\n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745826709073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n   width:scale(240),\n  },\n  pinkblur:{\n    position:\"absolute\",\n-   top:scale(̤-10)\n+   top:0\n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745826717212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n   width:scale(240),\n  },\n  pinkblur:{\n    position:\"absolute\",\n-   top:0\n+   bottom:20\n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745826724763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n   width:scale(240),\n  },\n  pinkblur:{\n    position:\"absolute\",\n-   bottom:20\n+   bottom:5\n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745826730766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n   width:scale(240),\n  },\n  pinkblur:{\n    position:\"absolute\",\n-   bottom:5\n+  \n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745826817355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { View, Text,StyleSheet,Image } from 'react-native'\n import React from 'react'\n import { LinearGradient } from 'expo-linear-gradient'\n import { StatusBar } from 'expo-status-bar'\n-import { scale } from 'react-native-size-matters'\n+import { scale, verticalScale } from 'react-native-size-matters'\n \n const homeScreen = () => {\n   return (\n     <LinearGradient style={styles.container} colors={[\"#250152\",\"#000\"]}\n@@ -38,8 +38,11 @@\n   width:scale(240),\n  },\n  pinkblur:{\n    position:\"absolute\",\n+   left:scale(-15),\n+   bottom:verticalScale(100),\n+   width:scale(210)\n   \n  }\n })\n \n"
+                },
+                {
+                    "date": 1745830341283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n-import { View, Text,StyleSheet,Image } from 'react-native'\n+import { View, Text,StyleSheet,Image, TouchableOpacity } from 'react-native'\n import React from 'react'\n import { LinearGradient } from 'expo-linear-gradient'\n import { StatusBar } from 'expo-status-bar'\n import { scale, verticalScale } from 'react-native-size-matters'\n+import FontAwesome from '@expo/vector-icons/FontAwesome'\n \n const homeScreen = () => {\n   return (\n     <LinearGradient style={styles.container} colors={[\"#250152\",\"#000\"]}\n@@ -17,10 +18,13 @@\n        <Image \n         source={require('@/assets/images/pink-blur.png')}\n         style={styles.pinkblur}\n       />\n-\n-\n+      <View style={{marginTop:verticalScale(-40)}}>\n+       <TouchableOpacity>\n+           <FontAwesome name'microphone' size=\"\"/>\n+       </TouchableOpacity>\n+      </View>\n     </LinearGradient>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1745830385783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         style={styles.pinkblur}\n       />\n       <View style={{marginTop:verticalScale(-40)}}>\n        <TouchableOpacity>\n-           <FontAwesome name'microphone' size=\"\"/>\n+           <FontAwesome name'microphone' size=\"50\" color=\"@2b3356\"/>\n        </TouchableOpacity>\n       </View>\n     </LinearGradient>\n   )\n"
+                },
+                {
+                    "date": 1745830401311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         style={styles.pinkblur}\n       />\n       <View style={{marginTop:verticalScale(-40)}}>\n        <TouchableOpacity>\n-           <FontAwesome name'microphone' size=\"50\" color=\"@2b3356\"/>\n+           <FontAwesome name='microphone' size=\"50\" color=\"@2b3356\"/>\n        </TouchableOpacity>\n       </View>\n     </LinearGradient>\n   )\n"
+                },
+                {
+                    "date": 1745830433446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         style={styles.pinkblur}\n       />\n       <View style={{marginTop:verticalScale(-40)}}>\n        <TouchableOpacity>\n-           <FontAwesome name='microphone' size=\"50\" color=\"@2b3356\"/>\n+           <FontAwesome name='microphone' size={scale(50)} color=\"@2b3356\"/>\n        </TouchableOpacity>\n       </View>\n     </LinearGradient>\n   )\n"
+                },
+                {
+                    "date": 1745830457189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n        <Image \n         source={require('@/assets/images/pink-blur.png')}\n         style={styles.pinkblur}\n       />\n-      <View style={{marginTop:verticalScale(-40)}}>\n+      <View style={styles.micorphone}>\n        <TouchableOpacity>\n            <FontAwesome name='microphone' size={scale(50)} color=\"@2b3356\"/>\n        </TouchableOpacity>\n       </View>\n"
+                },
+                {
+                    "date": 1745830483467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,12 @@\n    left:scale(-15),\n    bottom:verticalScale(100),\n    width:scale(210)\n   \n+ },\n+ microphone:{\n+  justifyContent:\"center\",\n+  alignItems:\"center\"\n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745830517841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n   \n  },\n  microphone:{\n   justifyContent:\"center\",\n-  alignItems:\"center\"\n+  marginHorizontal:\"auto\"\n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745830581354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,10 +48,9 @@\n    width:scale(210)\n   \n  },\n  microphone:{\n-  justifyContent:\"center\",\n-  marginHorizontal:\"auto\"\n+  \n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745830686149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,10 @@\n    width:scale(210)\n   \n  },\n  microphone:{\n-  \n+  justifyContent:\"center\",\n+  margin:\"auto\"\n  }\n })\n \n export default homeScreen\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745830721076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n        <Image \n         source={require('@/assets/images/pink-blur.png')}\n         style={styles.pinkblur}\n       />\n-      <View style={styles.micorphone}>\n+      <View style={styles.microphone}>\n        <TouchableOpacity>\n            <FontAwesome name='microphone' size={scale(50)} color=\"@2b3356\"/>\n        </TouchableOpacity>\n       </View>\n"
+                },
+                {
+                    "date": 1745830845661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,16 @@\n         source={require('@/assets/images/pink-blur.png')}\n         style={styles.pinkblur}\n       />\n       <View style={styles.microphone}>\n-       <TouchableOpacity>\n+       <TouchableOpacity style={{\n+        width:scale(110),\n+        height:scale(110),\n+        backgroundColor:\"#fff\",\n+        alignItems:\"center\",\n+        flexDirection:\"row\",\n+        borderRadius:scale(100)\n+       }}>\n            <FontAwesome name='microphone' size={scale(50)} color=\"@2b3356\"/>\n        </TouchableOpacity>\n       </View>\n     </LinearGradient>\n"
+                },
+                {
+                    "date": 1745830870390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,10 @@\n         height:scale(110),\n         backgroundColor:\"#fff\",\n         alignItems:\"center\",\n         flexDirection:\"row\",\n-        borderRadius:scale(100)\n+        borderRadius:scale(100),\n+        justifyContent:\"center\"\n        }}>\n            <FontAwesome name='microphone' size={scale(50)} color=\"@2b3356\"/>\n        </TouchableOpacity>\n       </View>\n"
+                }
+            ],
+            "date": 1745583554783,
+            "name": "Commit-0",
+            "content": "import { View, Text } from 'react-native'\nimport React from 'react'\n\nconst homeScreen = () => {\n  return (\n    <View>\n      <Text>homeScreen</Text>\n    </View>\n  )\n}\n\nexport default homeScreen"
+        }
+    ]
+}

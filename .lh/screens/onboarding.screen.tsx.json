@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 71,
+            "activePatchIndex": 107,
             "patches": [
                 {
                     "date": 1745406855538,
@@ -292,6 +292,150 @@
                 {
                     "date": 1745414514941,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n     bottom:verticalScale(50),\n     flexDirection:\"row\",\n     justifyContent:\"center\",\n     alignItems:\"center\",\n-    gap:scale(10)\n+    gap:scale(8)\n   },\n   dot:{\n     width:scale(8),\n     height:scale(8),\n"
+                },
+                {
+                    "date": 1745414780515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,11 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n+      <View style={styles.skipContainer}>\n+\n+      </View>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View style={styles.slide} key={index}>\n               {items.image}\n@@ -97,8 +100,14 @@\n     borderRadius:100,\n     backgroundColor:\"#fff\",\n     marginHorizontal:scale(2)\n \n+  },\n+  skipContainer:{\n+    color:\"#ff\",\n+    fontSize:scale(14),\n+    fontFamily:\"SegoeUI\",\n+    fontWeight:\"400\"\n   }\n })\n \n export default onBoardingScreen;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745414812762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n       <StatusBar barStyle=\"light-content\"/>\n       <View style={styles.skipContainer}>\n \n       </View>\n-      <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll}>\n+      <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View style={styles.slide} key={index}>\n               {items.image}\n               <Text style={styles.title}>{items.title}</Text>\n"
+                },
+                {
+                    "date": 1745414845622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n       <View style={styles.skipContainer}>\n-\n+          skip\n       </View>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View style={styles.slide} key={index}>\n"
+                },
+                {
+                    "date": 1745415019717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n import {scale, verticalScale} from \"react-native-size-matters\"\n import { useFonts } from 'expo-font'\n+import AntDesign from '@expo/vector-icons'\n \n \n const onBoardingScreen = () => {\n   const [fontLoaded,fontError] = useFonts({\n@@ -30,9 +31,9 @@\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n       <View style={styles.skipContainer}>\n-          skip\n+         <Text style={styles.skipText}>skip</Text>\n       </View>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View style={styles.slide} key={index}>\n"
+                },
+                {
+                    "date": 1745415038520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n     backgroundColor:\"#fff\",\n     marginHorizontal:scale(2)\n \n   },\n-  skipContainer:{\n+  skipText:{\n     color:\"#ff\",\n     fontSize:scale(14),\n     fontFamily:\"SegoeUI\",\n     fontWeight:\"400\"\n"
+                },
+                {
+                    "date": 1745415063312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,8 +102,11 @@\n     backgroundColor:\"#fff\",\n     marginHorizontal:scale(2)\n \n   },\n+  skipContainer:{\n+    position:\"absolute\"\n+  },\n   skipText:{\n     color:\"#ff\",\n     fontSize:scale(14),\n     fontFamily:\"SegoeUI\",\n"
+                },
+                {
+                    "date": 1745415077635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,9 +106,9 @@\n   skipContainer:{\n     position:\"absolute\"\n   },\n   skipText:{\n-    color:\"#ff\",\n+    color:\"#fff\",\n     fontSize:scale(14),\n     fontFamily:\"SegoeUI\",\n     fontWeight:\"400\"\n   }\n"
+                },
+                {
+                    "date": 1745415131710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,8 +104,9 @@\n \n   },\n   skipContainer:{\n     position:\"absolute\"\n+    top:verticalScale(45)\n   },\n   skipText:{\n     color:\"#fff\",\n     fontSize:scale(14),\n"
+                },
+                {
+                    "date": 1745415136768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,9 +103,9 @@\n     marginHorizontal:scale(2)\n \n   },\n   skipContainer:{\n-    position:\"absolute\"\n+    position:\"absolute\",\n     top:verticalScale(45)\n   },\n   skipText:{\n     color:\"#fff\",\n"
+                },
+                {
+                    "date": 1745415149876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,10 @@\n \n   },\n   skipContainer:{\n     position:\"absolute\",\n-    top:verticalScale(45)\n+    top:verticalScale(45),\n+    right:scale(30)\n   },\n   skipText:{\n     color:\"#fff\",\n     fontSize:scale(14),\n"
+                },
+                {
+                    "date": 1745415186102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,9 +105,12 @@\n   },\n   skipContainer:{\n     position:\"absolute\",\n     top:verticalScale(45),\n-    right:scale(30)\n+    right:scale(30),\n+    flexDirection:\"row\",\n+    alignItems:\"center\",\n+    gap:scale(8)\n   },\n   skipText:{\n     color:\"#fff\",\n     fontSize:scale(14),\n"
+                },
+                {
+                    "date": 1745415291457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n import {scale, verticalScale} from \"react-native-size-matters\"\n import { useFonts } from 'expo-font'\n-import AntDesign from '@expo/vector-icons'\n+import Ionicons from '@expo/vector-icons/Ionicons';\n \n \n const onBoardingScreen = () => {\n   const [fontLoaded,fontError] = useFonts({\n@@ -32,8 +32,9 @@\n     >\n       <StatusBar barStyle=\"light-content\"/>\n       <View style={styles.skipContainer}>\n          <Text style={styles.skipText}>skip</Text>\n+         <AntDesign name=\"arrowright\" size={scale(18)} color=\"white\"/>\n       </View>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View style={styles.slide} key={index}>\n"
+                },
+                {
+                    "date": 1745415298776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n     >\n       <StatusBar barStyle=\"light-content\"/>\n       <View style={styles.skipContainer}>\n          <Text style={styles.skipText}>skip</Text>\n-         <AntDesign name=\"arrowright\" size={scale(18)} color=\"white\"/>\n+         <Ionicons name=\"arrowright\" size={scale(18)} color=\"white\"/>\n       </View>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View style={styles.slide} key={index}>\n"
+                },
+                {
+                    "date": 1745415339451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n import {scale, verticalScale} from \"react-native-size-matters\"\n import { useFonts } from 'expo-font'\n-import Ionicons from '@expo/vector-icons/Ionicons';\n+import AntDesign from '@expo/vector-icons/AntDesign'\n \n \n const onBoardingScreen = () => {\n   const [fontLoaded,fontError] = useFonts({\n@@ -32,9 +32,9 @@\n     >\n       <StatusBar barStyle=\"light-content\"/>\n       <View style={styles.skipContainer}>\n          <Text style={styles.skipText}>skip</Text>\n-         <Ionicons name=\"arrowright\" size={scale(18)} color=\"white\"/>\n+         <AntDesign name=\"arrowright\" size={scale(18)} color=\"white\"/>\n       </View>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View style={styles.slide} key={index}>\n"
+                },
+                {
+                    "date": 1745415383697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent, Dimensions,Text } from 'react-native'\n+import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent, Dimensions,Text, Pressable } from 'react-native'\n import React, { useRef, useState } from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n@@ -30,12 +30,12 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <View style={styles.skipContainer}>\n+      <Pressable style={styles.skipContainer}>\n          <Text style={styles.skipText}>skip</Text>\n          <AntDesign name=\"arrowright\" size={scale(18)} color=\"white\"/>\n-      </View>\n+      </Pressable>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View style={styles.slide} key={index}>\n               {items.image}\n"
+                },
+                {
+                    "date": 1745415598889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,21 @@\n     const contentoffsetX = event.nativeEvent.contentOffset.x;\n     const currentIndex = Math.round(contentoffsetX/event.nativeEvent.layoutMeasurement.width)\n     setActiveIndex(currentIndex)\n   }\n+\n+  const handleSkip =() =>{\n+      const nextIndex = activeIndex +1;\n+      if(nextIndex < onBordingData.length){\n+        ScrollViewRef.current?scrollTo({\n+          x:Dimensions.get(\"window\").width * nextIndex,\n+          animated:true\n+        })\n+      }\n+  }\n+\n+\n+\n   return (\n     <LinearGradient\n     colors={[\"#250152\",\"#000000\"]}\n     start={{x:0,y:0}}\n@@ -30,9 +43,9 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <Pressable style={styles.skipContainer}>\n+      <Pressable onPress={handleSkip} style={styles.skipContainer}>\n          <Text style={styles.skipText}>skip</Text>\n          <AntDesign name=\"arrowright\" size={scale(18)} color=\"white\"/>\n       </Pressable>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n"
+                },
+                {
+                    "date": 1745415661429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,13 +25,17 @@\n \n   const handleSkip =() =>{\n       const nextIndex = activeIndex +1;\n       if(nextIndex < onBordingData.length){\n-        ScrollViewRef.current?scrollTo({\n-          x:Dimensions.get(\"window\").width * nextIndex,\n+        ScrollViewRef.current?.scrollTo({\n+          x :Dimensions.get(\"window\").width * nextIndex,\n           animated:true\n         })\n+        setActiveIndex(nextIndex)\n       }\n+        else{\n+          console.log(\"last index\")\n+        }\n   }\n \n \n \n"
+                },
+                {
+                    "date": 1745415724955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     setActiveIndex(currentIndex)\n   }\n \n   const handleSkip =() =>{\n-      const nextIndex = activeIndex +1;\n+      const nextIndex = activeIndex + 1;\n       if(nextIndex < onBordingData.length){\n         ScrollViewRef.current?.scrollTo({\n           x :Dimensions.get(\"window\").width * nextIndex,\n           animated:true\n"
+                },
+                {
+                    "date": 1745415767733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n       const nextIndex = activeIndex + 1;\n       if(nextIndex < onBordingData.length){\n         ScrollViewRef.current?.scrollTo({\n           x :Dimensions.get(\"window\").width * nextIndex,\n-          animated:true\n+          animated:true,\n         })\n         setActiveIndex(nextIndex)\n       }\n         else{\n"
+                },
+                {
+                    "date": 1745415920825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   const handleSkip =() =>{\n       const nextIndex = activeIndex + 1;\n       if(nextIndex < onBordingData.length){\n         ScrollViewRef.current?.scrollTo({\n-          x :Dimensions.get(\"window\").width * nextIndex,\n+          x: Dimensions.get(\"window\").width * nextIndex,\n           animated:true,\n         })\n         setActiveIndex(nextIndex)\n       }\n"
+                },
+                {
+                    "date": 1745415943486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       if(nextIndex < onBordingData.length){\n         ScrollViewRef.current?.scrollTo({\n           x: Dimensions.get(\"window\").width * nextIndex,\n           animated:true,\n-        })\n+        });\n         setActiveIndex(nextIndex)\n       }\n         else{\n           console.log(\"last index\")\n"
+                },
+                {
+                    "date": 1745416105476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,25 +21,25 @@\n     const contentoffsetX = event.nativeEvent.contentOffset.x;\n     const currentIndex = Math.round(contentoffsetX/event.nativeEvent.layoutMeasurement.width)\n     setActiveIndex(currentIndex)\n   }\n+  const handleSkip = () => {\n+    const nextIndex = activeIndex + 1;\n+  \n+    if (nextIndex < onBoardingData.length) {\n+      ScrollViewRef.current?.scrollTo({\n+        x: Dimensions.get('window').width * nextIndex,\n+        animated: true,\n+      });\n+      setActiveIndex(nextIndex);\n+    } else {\n+      console.log('last index');\n+      // You can optionally navigate or do something else here\n+    }\n+  };\n+  \n \n-  const handleSkip =() =>{\n-      const nextIndex = activeIndex + 1;\n-      if(nextIndex < onBordingData.length){\n-        ScrollViewRef.current?.scrollTo({\n-          x: Dimensions.get(\"window\").width * nextIndex,\n-          animated:true,\n-        });\n-        setActiveIndex(nextIndex)\n-      }\n-        else{\n-          console.log(\"last index\")\n-        }\n-  }\n \n-\n-\n   return (\n     <LinearGradient\n     colors={[\"#250152\",\"#000000\"]}\n     start={{x:0,y:0}}\n"
+                },
+                {
+                    "date": 1745416155663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n   }\n   const handleSkip = () => {\n     const nextIndex = activeIndex + 1;\n   \n-    if (nextIndex < onBoardingData.length) {\n+    if (nextIndex < onBordingData.length) {\n       ScrollViewRef.current?.scrollTo({\n         x: Dimensions.get('window').width * nextIndex,\n         animated: true,\n       });\n"
+                },
+                {
+                    "date": 1745416177026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,25 +21,25 @@\n     const contentoffsetX = event.nativeEvent.contentOffset.x;\n     const currentIndex = Math.round(contentoffsetX/event.nativeEvent.layoutMeasurement.width)\n     setActiveIndex(currentIndex)\n   }\n-  const handleSkip = () => {\n-    const nextIndex = activeIndex + 1;\n-  \n-    if (nextIndex < onBordingData.length) {\n-      ScrollViewRef.current?.scrollTo({\n-        x: Dimensions.get('window').width * nextIndex,\n-        animated: true,\n-      });\n-      setActiveIndex(nextIndex);\n-    } else {\n-      console.log('last index');\n-      // You can optionally navigate or do something else here\n-    }\n-  };\n-  \n \n+  const handleSkip =() =>{\n+      const nextIndex = activeIndex + 1;\n+      if(nextIndex < onBordingData.length){\n+        ScrollViewRef.current?.scrollTo({\n+          x: Dimensions.get(\"window\").width * nextIndex,\n+          animated:true,\n+        });\n+        setActiveIndex(nextIndex)\n+      }\n+        else{\n+          console.log(\"last index\")\n+        }\n+  }\n \n+\n+\n   return (\n     <LinearGradient\n     colors={[\"#250152\",\"#000000\"]}\n     start={{x:0,y:0}}\n"
+                },
+                {
+                    "date": 1745416458967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <Pressable onPress={handleSkip} style={styles.skipContainer}>\n+      <Pressable onPress={()=>alert(\"hey\")} style={styles.skipContainer}>\n          <Text style={styles.skipText}>skip</Text>\n          <AntDesign name=\"arrowright\" size={scale(18)} color=\"white\"/>\n       </Pressable>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n"
+                },
+                {
+                    "date": 1745416514840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <Pressable onPress={()=>alert(\"hey\")} style={styles.skipContainer}>\n+      <Pressable onPress={()=>alert(\"pre\")} style={styles.skipContainer}>\n          <Text style={styles.skipText}>skip</Text>\n          <AntDesign name=\"arrowright\" size={scale(18)} color=\"white\"/>\n       </Pressable>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n"
+                },
+                {
+                    "date": 1745416580278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent, Dimensions,Text, Pressable } from 'react-native'\n+import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent, Dimensions,Text, Pressable, TouchableOpacity } from 'react-native'\n import React, { useRef, useState } from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n@@ -47,12 +47,12 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <Pressable onPress={()=>alert(\"pre\")} style={styles.skipContainer}>\n+      <TouchableOpacity onPress={()=>alert(\"pre\")} style={styles.skipContainer}>\n          <Text style={styles.skipText}>skip</Text>\n          <AntDesign name=\"arrowright\" size={scale(18)} color=\"white\"/>\n-      </Pressable>\n+      </TouchableOpacity>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View style={styles.slide} key={index}>\n               {items.image}\n"
+                },
+                {
+                    "date": 1745416610453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent, Dimensions,Text, Pressable, TouchableOpacity } from 'react-native'\n+import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent, Dimensions,Text, Pressable } from 'react-native'\n import React, { useRef, useState } from 'react'\n import {LinearGradient} from 'expo-linear-gradient'\n import OnBording1 from '@/assets/svgs/onbording1'\n import { onBordingData } from '@/configs/constants'\n@@ -47,12 +47,12 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <TouchableOpacity onPress={()=>alert(\"pre\")} style={styles.skipContainer}>\n+      <Touchableop onPress={()=>alert(\"pre\")} style={styles.skipContainer}>\n          <Text style={styles.skipText}>skip</Text>\n          <AntDesign name=\"arrowright\" size={scale(18)} color=\"white\"/>\n-      </TouchableOpacity>\n+      </Pressable>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View style={styles.slide} key={index}>\n               {items.image}\n"
+                },
+                {
+                    "date": 1745416634143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,13 +47,13 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <Touchableop onPress={()=>alert(\"pre\")} style={styles.skipContainer}>\n+      <Pressable onPress={()=>alert(\"pre\")} style={styles.skipContainer}>\n          <Text style={styles.skipText}>skip</Text>\n          <AntDesign name=\"arrowright\" size={scale(18)} color=\"white\"/>\n       </Pressable>\n-      <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef}>\n+      <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef} keyboardShouldPersistTaps=\"handled\">\n         {onBordingData.map((items:onBordingDataType,index:number)=>(\n          <View style={styles.slide} key={index}>\n               {items.image}\n               <Text style={styles.title}>{items.title}</Text>\n"
+                },
+                {
+                    "date": 1745416722829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,9 +126,10 @@\n     top:verticalScale(45),\n     right:scale(30),\n     flexDirection:\"row\",\n     alignItems:\"center\",\n-    gap:scale(8)\n+    gap:scale(8),\n+    zIndex:9999\n   },\n   skipText:{\n     color:\"#fff\",\n     fontSize:scale(14),\n"
+                },
+                {
+                    "date": 1745416746629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     style={styles.container}\n     \n     >\n       <StatusBar barStyle=\"light-content\"/>\n-      <Pressable onPress={()=>alert(\"pre\")} style={styles.skipContainer}>\n+      <Pressable onPress={handleSkip} style={styles.skipContainer}>\n          <Text style={styles.skipText}>skip</Text>\n          <AntDesign name=\"arrowright\" size={scale(18)} color=\"white\"/>\n       </Pressable>\n       <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef} keyboardShouldPersistTaps=\"handled\">\n"
+                },
+                {
+                    "date": 1745416921808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     const currentIndex = Math.round(contentoffsetX/event.nativeEvent.layoutMeasurement.width)\n     setActiveIndex(currentIndex)\n   }\n \n-  const handleSkip =() =>{\n+  const handleSkip =async() =>{\n       const nextIndex = activeIndex + 1;\n       if(nextIndex < onBordingData.length){\n         ScrollViewRef.current?.scrollTo({\n           x: Dimensions.get(\"window\").width * nextIndex,\n"
+                },
+                {
+                    "date": 1745477615556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     const currentIndex = Math.round(contentoffsetX/event.nativeEvent.layoutMeasurement.width)\n     setActiveIndex(currentIndex)\n   }\n \n-  const handleSkip =async() =>{\n+  const handleSkip =async () =>{\n       const nextIndex = activeIndex + 1;\n       if(nextIndex < onBordingData.length){\n         ScrollViewRef.current?.scrollTo({\n           x: Dimensions.get(\"window\").width * nextIndex,\n"
+                },
+                {
+                    "date": 1745487288483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import { onBordingData } from '@/configs/constants'\n import {scale, verticalScale} from \"react-native-size-matters\"\n import { useFonts } from 'expo-font'\n import AntDesign from '@expo/vector-icons/AntDesign'\n+import AsyncStorage from '@react-native-async-storage/async-storage'\n \n \n const onBoardingScreen = () => {\n   const [fontLoaded,fontError] = useFonts({\n@@ -32,9 +33,9 @@\n         });\n         setActiveIndex(nextIndex)\n       }\n         else{\n-          console.log(\"last index\")\n+         await AsyncStorage.setItem(\"onbording\",'true')\n         }\n   }\n \n \n"
+                },
+                {
+                    "date": 1745564736119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,13 +34,21 @@\n         setActiveIndex(nextIndex)\n       }\n         else{\n          await AsyncStorage.setItem(\"onbording\",'true')\n+         setTimeout(() => {\n+            retriveData()\n+         }, 20000);\n         }\n   }\n \n+  const retriveData =async()=> {\n+    const data = await AsyncStorage.getItem(\"onbording\");\n+    console.log(data,\"value\")\n+  }\n \n \n+\n   return (\n     <LinearGradient\n     colors={[\"#250152\",\"#000000\"]}\n     start={{x:0,y:0}}\n"
+                },
+                {
+                    "date": 1745581301031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n import {scale, verticalScale} from \"react-native-size-matters\"\n import { useFonts } from 'expo-font'\n import AntDesign from '@expo/vector-icons/AntDesign'\n import AsyncStorage from '@react-native-async-storage/async-storage'\n+import { router } from 'expo-router'\n \n \n const onBoardingScreen = () => {\n   const [fontLoaded,fontError] = useFonts({\n@@ -34,21 +35,15 @@\n         setActiveIndex(nextIndex)\n       }\n         else{\n          await AsyncStorage.setItem(\"onbording\",'true')\n-         setTimeout(() => {\n-            retriveData()\n-         }, 20000);\n+          router.push('/home')\n         }\n   }\n \n-  const retriveData =async()=> {\n-    const data = await AsyncStorage.getItem(\"onbording\");\n-    console.log(data,\"value\")\n-  }\n+ \n \n \n-\n   return (\n     <LinearGradient\n     colors={[\"#250152\",\"#000000\"]}\n     start={{x:0,y:0}}\n"
                 }
             ],
             "date": 1745406855538,

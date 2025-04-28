@@ -1,10 +1,13 @@
-import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent, Dimensions,Text } from 'react-native'
+import {StatusBar,StyleSheet, View, ScrollView, NativeSyntheticEvent, NativeScrollEvent, Dimensions,Text, Pressable } from 'react-native'
 import React, { useRef, useState } from 'react'
 import {LinearGradient} from 'expo-linear-gradient'
 import OnBording1 from '@/assets/svgs/onbording1'
 import { onBordingData } from '@/configs/constants'
 import {scale, verticalScale} from "react-native-size-matters"
 import { useFonts } from 'expo-font'
+import AntDesign from '@expo/vector-icons/AntDesign'
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import { router } from 'expo-router'
 
 
 const onBoardingScreen = () => {
@@ -21,6 +24,25 @@ const onBoardingScreen = () => {
     const currentIndex = Math.round(contentoffsetX/event.nativeEvent.layoutMeasurement.width)
     setActiveIndex(currentIndex)
   }
+
+  const handleSkip =async () =>{
+      const nextIndex = activeIndex + 1;
+      if(nextIndex < onBordingData.length){
+        ScrollViewRef.current?.scrollTo({
+          x: Dimensions.get("window").width * nextIndex,
+          animated:true,
+        });
+        setActiveIndex(nextIndex)
+      }
+        else{
+         await AsyncStorage.setItem("onbording",'true')
+          router.push('/home')
+        }
+  }
+
+ 
+
+
   return (
     <LinearGradient
     colors={["#250152","#000000"]}
@@ -30,7 +52,11 @@ const onBoardingScreen = () => {
     
     >
       <StatusBar barStyle="light-content"/>
-      <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll}>
+      <Pressable onPress={handleSkip} style={styles.skipContainer}>
+         <Text style={styles.skipText}>skip</Text>
+         <AntDesign name="arrowright" size={scale(18)} color="white"/>
+      </Pressable>
+      <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} onScroll={handleScroll} ref={ScrollViewRef} keyboardShouldPersistTaps="handled">
         {onBordingData.map((items:onBordingDataType,index:number)=>(
          <View style={styles.slide} key={index}>
               {items.image}
@@ -98,6 +124,21 @@ const styles = StyleSheet.create({
     backgroundColor:"#fff",
     marginHorizontal:scale(2)
 
+  },
+  skipContainer:{
+    position:"absolute",
+    top:verticalScale(45),
+    right:scale(30),
+    flexDirection:"row",
+    alignItems:"center",
+    gap:scale(8),
+    zIndex:9999
+  },
+  skipText:{
+    color:"#fff",
+    fontSize:scale(14),
+    fontFamily:"SegoeUI",
+    fontWeight:"400"
   }
 })
 
